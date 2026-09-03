@@ -45,7 +45,8 @@ export default function Navbar() {
         <a href="#" className="flex items-center gap-3" aria-label="Cabinet Chabert Avocat">
           <MonogramCC size={44} color="#b08840" />
           <span style={{ fontFamily: 'var(--font-playfair)', color: '#f6f3ee', fontSize: '1rem', letterSpacing: '0.08em', lineHeight: 1.2 }}>
-            Clémentine<br /><span style={{ color: '#b08840' }}>Chabert</span>
+            Clémentine <span style={{ color: '#b08840' }}>Chabert</span>
+            <span style={{ display: 'block', fontFamily: 'var(--font-lato)', fontSize: '0.65rem', letterSpacing: '0.14em', textTransform: 'uppercase', color: '#726a58', fontWeight: 400, marginTop: '2px' }}>Avocate au Barreau de Toulouse</span>
           </span>
         </a>
 

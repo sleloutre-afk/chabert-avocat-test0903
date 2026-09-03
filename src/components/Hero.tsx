@@ -1,3 +1,5 @@
+'use client'
+
 import { MonogramCC } from './Navbar'
 
 export default function Hero() {
@@ -22,8 +24,7 @@ export default function Hero() {
           Cabinet Chabert Avocat
         </p>
         <h1 style={{ fontFamily: 'var(--font-playfair)', color: '#f6f3ee', fontSize: 'clamp(2rem, 5vw, 3.4rem)', fontWeight: 400, lineHeight: 1.18, margin: '0 0 24px' }}>
-          Maître Clémentine Chabert<br />
-          <em style={{ color: '#b08840', fontStyle: 'italic' }}>Avocate à Toulouse</em>
+          Maître Clémentine Chabert
         </h1>
         <p style={{ fontFamily: 'var(--font-lato)', color: '#d8d0c0', fontSize: '1.05rem', lineHeight: 1.7, margin: '0 0 40px', fontWeight: 300 }}>
           Distribution commerciale · Droit de la concurrence<br />

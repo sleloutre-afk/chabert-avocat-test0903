@@ -40,10 +40,6 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
               style={{ fontFamily: 'var(--font-lato)', color: '#726a58', lineHeight: 1.85, fontSize: '1rem' }}
               dangerouslySetInnerHTML={{ __html: article.contenu }}
             />
-            <style>{`
-              .article-body h2 { font-family: var(--font-playfair); font-size: 1.3rem; font-weight: 400; color: #1c1f28; margin: 40px 0 16px; }
-              .article-body p { margin: 0 0 20px; }
-            `}</style>
 
             <div style={{ marginTop: '56px', paddingTop: '40px', borderTop: '1px solid #d8d0c0', background: '#ede8df', padding: '36px', marginLeft: '-0px' }}>
               <p style={{ fontFamily: 'var(--font-lato)', fontSize: '0.8rem', color: '#726a58', lineHeight: 1.7, margin: '0 0 16px' }}>

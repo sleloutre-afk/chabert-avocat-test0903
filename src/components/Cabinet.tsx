@@ -56,12 +56,6 @@ export default function Cabinet() {
 
         </div>
       </div>
-
-      <style>{`
-        @media (max-width: 767px) {
-          .cabinet-grid { grid-template-columns: 1fr !important; gap: 3rem !important; }
-        }
-      `}</style>
     </section>
   )
 }

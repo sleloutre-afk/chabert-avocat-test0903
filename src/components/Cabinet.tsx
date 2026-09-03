@@ -1,43 +1,67 @@
 export default function Cabinet() {
   return (
     <section id="cabinet" style={{ background: '#f6f3ee', padding: '96px 24px' }}>
-      <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
-        <div>
-          <p style={{ fontFamily: 'var(--font-lato)', fontSize: '0.72rem', letterSpacing: '0.28em', textTransform: 'uppercase', color: '#b08840', marginBottom: '16px' }}>Le Cabinet</p>
-          <h2 style={{ fontFamily: 'var(--font-playfair)', fontSize: 'clamp(1.6rem, 3vw, 2.4rem)', color: '#1c1f28', fontWeight: 400, lineHeight: 1.22, margin: '0 0 24px' }}>
-            Une approche pragmatique<br />au service des entreprises
-          </h2>
-          <div style={{ width: '40px', height: '2px', background: '#b08840', marginBottom: '28px' }} />
-          <p style={{ fontFamily: 'var(--font-lato)', color: '#726a58', lineHeight: 1.8, marginBottom: '20px' }}>
-            Maître Clémentine Chabert est avocate inscrite au Barreau de Toulouse depuis 2020. Elle conseille et défend les entreprises dans leurs relations commerciales, qu'il s'agisse de structurer un réseau de distribution, de sécuriser leurs contrats ou de faire face à un litige concurrentiel.
-          </p>
-          <p style={{ fontFamily: 'var(--font-lato)', color: '#726a58', lineHeight: 1.8, marginBottom: '20px' }}>
-            Formée à l'École de Formation du Barreau de Paris et titulaire d'un Master 2 en Droit de la distribution et Contrats d'affaires de l'Université de Montpellier, elle a exercé au sein de cabinets spécialisés à Bordeaux (FORWARD AVOCATS, Fidal) avant de rejoindre Deloitte Société d'Avocats.
-          </p>
-          <p style={{ fontFamily: 'var(--font-lato)', color: '#726a58', lineHeight: 1.8 }}>
-            Dotée d'une expertise sectorielle en agroalimentaire et dans le secteur vitivinicole, elle intervient en français et en anglais juridique auprès d'entreprises françaises et internationales.
-          </p>
-        </div>
+      <div className="max-w-6xl mx-auto">
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '5rem', alignItems: 'center' }} className="cabinet-grid">
 
-        <div style={{ background: '#ede8df', padding: '48px 40px' }}>
-          <p style={{ fontFamily: 'var(--font-lato)', fontSize: '0.7rem', letterSpacing: '0.2em', textTransform: 'uppercase', color: '#b08840', marginBottom: '24px' }}>Parcours</p>
-          {[
-            { period: 'Depuis 2024', role: 'Deloitte Société d\'Avocats', detail: 'Balma / Toulouse — Droit des affaires' },
-            { period: '2022 – 2024', role: 'FORWARD AVOCATS', detail: 'Bordeaux — Distribution & Concurrence' },
-            { period: '2020 – 2022', role: 'Fidal', detail: 'Bordeaux — Droit des affaires' },
-            { period: '2019 – 2020', role: 'EFB Paris', detail: 'École de Formation du Barreau' },
-            { period: '2018 – 2019', role: 'M2 Distribution & Contrats', detail: 'Université de Montpellier (Mention AB)' },
-          ].map((item, i) => (
-            <div key={i} style={{ display: 'flex', gap: '20px', paddingBottom: '20px', borderBottom: i < 4 ? '1px solid #d8d0c0' : 'none', marginBottom: i < 4 ? '20px' : 0 }}>
-              <span style={{ fontFamily: 'var(--font-lato)', fontSize: '0.72rem', color: '#b08840', minWidth: '80px', paddingTop: '2px', letterSpacing: '0.04em' }}>{item.period}</span>
-              <div>
-                <div style={{ fontFamily: 'var(--font-playfair)', fontSize: '0.95rem', color: '#1c1f28', marginBottom: '2px' }}>{item.role}</div>
-                <div style={{ fontFamily: 'var(--font-lato)', fontSize: '0.8rem', color: '#726a58' }}>{item.detail}</div>
-              </div>
+          {/* Photo */}
+          <div style={{ position: 'relative' }}>
+            <div style={{ position: 'absolute', top: '-1.5rem', left: '-1.5rem', right: '1.5rem', bottom: '1.5rem', border: '1px solid rgba(176,136,64,0.22)' }} />
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/chabert.png"
+              alt="Maître Clémentine Chabert — Avocate au Barreau de Toulouse"
+              style={{ width: '100%', height: '520px', objectFit: 'cover', objectPosition: 'center top', display: 'block', position: 'relative' }}
+            />
+            <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, height: '35%', background: 'linear-gradient(to top, rgba(28,31,40,0.50), transparent)' }} />
+          </div>
+
+          {/* Bio */}
+          <div>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '1.5rem' }}>
+              <div style={{ width: '32px', height: '1px', background: '#b08840' }} />
+              <span style={{ fontFamily: 'var(--font-lato)', color: '#b08840', fontSize: '0.62rem', letterSpacing: '0.28em', textTransform: 'uppercase' }}>Le cabinet</span>
             </div>
-          ))}
+            <h2 style={{ fontFamily: 'var(--font-playfair)', fontSize: 'clamp(1.8rem, 3.2vw, 2.6rem)', fontWeight: 400, color: '#1c1f28', lineHeight: 1.2, marginBottom: '1.5rem' }}>
+              Maître Clémentine<br /><em style={{ color: '#b08840' }}>Chabert</em>
+            </h2>
+
+            <p style={{ fontFamily: 'var(--font-lato)', color: 'rgba(28,31,40,0.65)', fontSize: '0.88rem', lineHeight: 1.85, marginBottom: '1rem' }}>
+              Maître Clémentine Chabert est avocate inscrite au <strong style={{ color: '#1c1f28' }}>Barreau de Toulouse depuis 2020</strong>. Titulaire d'un Master 2 en Droit de la distribution et Contrats d'affaires de l'Université de Montpellier (mention assez bien) et d'un CES Droit économique, elle a complété sa formation par le CAPA à l'EFB Paris en 2019-2020.
+            </p>
+
+            <p style={{ fontFamily: 'var(--font-lato)', color: 'rgba(28,31,40,0.65)', fontSize: '0.88rem', lineHeight: 1.85, marginBottom: '1rem' }}>
+              Elle a exercé successivement au sein de <strong style={{ color: '#1c1f28' }}>Fidal</strong> à Bordeaux (2020-2022), puis de <strong style={{ color: '#1c1f28' }}>FORWARD AVOCATS</strong> (2022-2024), cabinet dédié au droit de la distribution et de la concurrence, avant de rejoindre <strong style={{ color: '#1c1f28' }}>Deloitte Société d'Avocats</strong> à Balma depuis 2024.
+            </p>
+
+            <p style={{ fontFamily: 'var(--font-lato)', color: 'rgba(28,31,40,0.65)', fontSize: '0.88rem', lineHeight: 1.85, marginBottom: '2rem' }}>
+              Dotée d'une expertise sectorielle en <strong style={{ color: '#1c1f28' }}>agroalimentaire et vitivinicole</strong>, elle intervient en français et en anglais juridique auprès d'entreprises françaises et internationales dans leurs problématiques de distribution, de concurrence et de contrats d'affaires.
+            </p>
+
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '0.6rem', paddingLeft: '1rem', borderLeft: '2px solid rgba(176,136,64,0.30)' }}>
+              {[
+                'M2 Droit de la distribution & Contrats d\'affaires — Montpellier (mention AB)',
+                'CES Droit économique — M1 Droit de l\'Entreprise',
+                'CAPA — EFB Paris (2020)',
+                'Barreau de Toulouse — N° 207 — Serment 2020',
+                'Anglais juridique maîtrisé',
+              ].map((item, i) => (
+                <div key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem' }}>
+                  <div style={{ width: '4px', height: '4px', borderRadius: '50%', background: '#b08840', flexShrink: 0, marginTop: '0.45rem' }} />
+                  <span style={{ fontFamily: 'var(--font-lato)', color: 'rgba(28,31,40,0.60)', fontSize: '0.80rem', lineHeight: 1.60 }}>{item}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
         </div>
       </div>
+
+      <style>{`
+        @media (max-width: 767px) {
+          .cabinet-grid { grid-template-columns: 1fr !important; gap: 3rem !important; }
+        }
+      `}</style>
     </section>
   )
 }
